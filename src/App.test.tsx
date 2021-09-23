@@ -25,4 +25,11 @@ describe('App', () => {
     const element = await screen.findByTestId("answer-label");
     expect(element).toBeInTheDocument();
   })
+
+  it("Does it swap the current card?", () => {
+    //const button = screen.getByTestId("swap-current-card-button");
+    //button.click();
+    const element = screen.getByText("Your colleague says \"It is tough having a woman as a boss because women are so emotional\"");
+    expect(element).not.toBeInTheDocument();
+  })
 })
